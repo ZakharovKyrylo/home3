@@ -47,7 +47,7 @@ class Book{
     private String publishing;
     private String year;
     private String pages;
-    private String price;
+    private String price;ggrg
     private String cover;
 
     Book(int id, String title, String author, String publishing,

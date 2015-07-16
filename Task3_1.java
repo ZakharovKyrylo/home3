@@ -7,7 +7,7 @@ public class Task3_1 {
         Dispatcher.dispatcher();
     }
 }
-
+//
 class Dispatcher {
 
     static void dispatcher() {

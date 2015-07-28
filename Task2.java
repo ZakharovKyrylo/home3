@@ -9,17 +9,18 @@ public class Task2 {
         Game game = new Game();
         Random r= new Random();
         int random=r.nextInt(99+1);
-//        System.out.println(random);
         game.guessTheNumber(random);
     }
 }
 
 class Game{
     void guessTheNumber(int random){
+        Scanner scanner = new Scanner(System.in);
+        int num=0;
         while (true) {
-            Scanner scanner = new Scanner(System.in);
+
             System.out.println("enter number");
-            int num = scanner.nextInt();
+            num = scanner.nextInt();
             if (num == random) {
                 System.out.println("congratulations");
                 return;

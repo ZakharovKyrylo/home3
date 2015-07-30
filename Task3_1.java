@@ -4,28 +4,42 @@ import java.util.Random;
 
 public class Task3_1 {
     public static void main(String[] args) {
-        Dispatcher.dispatcher();
+        Trip trip = new Trip();
+        Random Rand = new Random();
+        Dispatcher.dispatcher(Rand.nextInt(5));//выбор деспетчера
+
+
+        String tripName;
+        tripName = trip.choseTrip(Rand.nextInt(5)); // выбор маршрута
+
     }
 }
+
+
 //
 class Dispatcher {
 
-    static void dispatcher() {
+    static int choseDispatcher;
+    Dispatcher(int num){
+        choseDispatcher = num;
+    }
 
+    static void dispatcher(int i) {
+        Task3_1 task = new Task3_1();
         Random Rand = new Random();
         Driver driver = new Driver();
         Car car = new Car();
         Trip trip = new Trip();
 
         String driverName;
-        String tripName;
+
         String carName;
 
         String removedDriver = null;
         String removedCar = null;
 
         String name = null; //выбор диспетчера
-        switch (Rand.nextInt(5)) {
+        switch (choseDispatcher) {
             case 0:                name = " NameDispatcher0 ";                break;
             case 1:                name = " NameDispatcher1 ";                break;
             case 2:                name = " NameDispatcher2 ";                break;
@@ -43,7 +57,7 @@ class Dispatcher {
             }
         }
 
-        tripName = trip.choseTrip(Rand.nextInt(5)); // выбор маршрута
+
 
         while (true) {
             carName = car.choseCar(Rand.nextInt(5)); // выбор машини
@@ -53,7 +67,8 @@ class Dispatcher {
             }
         }
 
-        System.out.println("Dispatcher " + name + " Chose driver" + driverName + " for trip " + tripName + " on " + carName);
+
+        System.out.println("Dispatcher " + name + " Chose driver" + driverName + " for trip " +  " on " + carName);
 
         removedCar=driver.work();
         System.out.println("driver " + driverName + " has done his work, and car " + carName + removedCar ); //отчет о работе

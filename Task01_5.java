@@ -44,7 +44,7 @@ public class Task01_5 {
 
 class Search {
     boolean search(String year, String search) {
-        if (year.startsWith("1") || year.startsWith("2")) {
+        if (search.startsWith("1") || search.startsWith("2")) {
             if (Integer.parseInt(year) <= Integer.parseInt(search)) return false;
             else return true;
         }

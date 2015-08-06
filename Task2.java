@@ -1,4 +1,4 @@
-package home03;
+package org.sourceit.zakharov.home03;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ public class Task2 {
         game.guessTheNumber(random);
     }
 }
-
+//
 class Game{
     void guessTheNumber(int random){
         Scanner scanner = new Scanner(System.in);

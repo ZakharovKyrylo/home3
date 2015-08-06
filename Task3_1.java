@@ -1,4 +1,4 @@
-package home03;
+package org.sourceit.zakharov.home03;
 
 import java.util.Random;
 
@@ -16,7 +16,7 @@ public class Task3_1 {
 }
 
 
-//
+////
 class Dispatcher {
 
     static int choseDispatcher;

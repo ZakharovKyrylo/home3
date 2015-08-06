@@ -1,4 +1,4 @@
-package home03;
+package org.sourceit.zakharov.home03;
 
 import java.util.Scanner;
 
